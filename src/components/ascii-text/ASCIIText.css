@@ -1,0 +1,31 @@
+.ascii-text-container {
+  position: absolute;
+  inset: 0;
+}
+
+.ascii-text-container canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* The sampling canvas is only read from; the <pre> is what people see. */
+  visibility: hidden;
+  image-rendering: pixelated;
+}
+
+.ascii-text-container pre {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  text-align: left;
+  white-space: pre;
+  width: max-content;
+  flex: none;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  color: var(--foreground);
+}
+
